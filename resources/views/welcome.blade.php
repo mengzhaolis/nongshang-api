@@ -7,11 +7,6 @@
 @include('common._header')
 @include('common._menu')
 
-<audio style="display:none" controls="controls" id="player">
-    <source src="/ling.mp3" type="audio/ogg" />
-    Your browser does not support the audio element.
-</audio>
-
 <div class="dislpayArrow hidden-xs">
     <a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a>
 </div>
@@ -55,42 +50,5 @@
 @include('common._footer');
 </body>
 <script>
-$(function(){
-
-    nums()
-
-})
-var ref ='';
-ref = setInterval(function(){
-    nums();
-},60*60*1000);
-function nums()
-{
-    var email = $("#email").val();
-    // alert(email)
-    var token = $("#token").val();
-    var url ="/nums";
-    var data ={'_token':token,'email':email};
-    $.post(url,data,function(data){
-        if(data['nums']!=0)
-        {
-            // alert(1)
-            var player = $("#player")[0]; /*jquery对象转换成js对象*/
-            
-                player.play(); /*播放*/
-           
-            // $('#player').attr('autoplay','autoplay');
-            $('.nums').html(data['nums']);
-            $('.role_name').html(data['role_name']);
-            $('.name').html(data['name']);
-        }else
-        {
-            $('.role_name').html(data['role_name']);
-            $('.name').html(data['name']);
-        }
-        
-        
-    })
-}
 </script>
 </html>
