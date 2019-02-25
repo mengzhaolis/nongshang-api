@@ -52,5 +52,6 @@ Route::group(['prefix' => '/member'],function(){
     // 销售-用户关系表
     Route::post('/user_member','Admin\MemberController@user_member');
 });
-
+// swoole 测试
+Route::get('/swoole','Admin\MemberController@swoole');
  

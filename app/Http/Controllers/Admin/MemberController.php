@@ -48,4 +48,9 @@ class MemberController extends Controller
             }
         });
     }
+    // 测试swoole
+    public function swoole()
+    {
+        return view('swoole.swoole');
+    }
 }
