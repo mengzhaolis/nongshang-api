@@ -101,7 +101,7 @@ class Swoole extends Command
     {
         // $param['token'] = ###;
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "http://127.0.0.1:9502");
+        curl_setopt($ch, CURLOPT_URL, "http://39.106.183.213:9502");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);

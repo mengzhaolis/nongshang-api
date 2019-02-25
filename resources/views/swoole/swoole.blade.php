@@ -6,7 +6,7 @@
 $('#test').click(function(){ 
   if("WebSocket" in window){ 
   console.log("您的浏览器支持websocket\n"); 
-  var ws = new WebSocket("ws://127.0.0.1:9502");//创建websocket对象
+  var ws = new WebSocket("ws://39.106.183.213:9502");//创建websocket对象
   ws.onopen = function(){ 
     ws.send("连接已建立\n"); ws.send($("#content").attr("js-sid")); console.log("数据发送中"); 
   } 
